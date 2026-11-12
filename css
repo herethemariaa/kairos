@@ -1,0 +1,389 @@
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:wght@600;800&family=Nunito+Sans:wght@400;700&display=swap");
+
+/* ---------- Geral ---------- */
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 17px;
+  line-height: 1.6;
+  color: #1d2b24;
+  background-color: #eaf3ec;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Times New Roman", Times, serif;
+  color: #17402c;
+  margin: 0;
+}
+
+a:focus {
+  outline: 3px solid #f2c230;
+}
+
+/* ---------- Cabeçalho ---------- */
+.topo {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 40px;
+  background-color: #17402c;
+  border-bottom: 4px solid #f2c230;
+}
+
+.topo h1 {
+  color: #ffffff;
+  font-size: 32px;
+}
+
+.topo ul {
+  display: flex;
+  gap: 10px;
+}
+
+.topo a {
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 8px 16px;
+  border-radius: 20px;
+}
+
+.topo a:hover {
+  background-color: #f2c230;
+  color: #17402c;
+}
+
+/* ---------- Slider ---------- */
+.slider {
+  display: flex;
+  overflow-x: auto;
+  background-color: #17402c;
+}
+
+.slider figure {
+  flex: 0 0 100%;
+  margin: 0;
+}
+
+.slider img {
+  width: 100%;
+  height: 450px;
+  object-fit: cover;
+}
+
+/* ---------- Conteúdo (grid) ---------- */
+.conteudo {
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  gap: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+.tema {
+  grid-column: 2;
+  scroll-margin-top: 90px;
+}
+
+/* ---------- Menu de tópicos ---------- */
+.topicos {
+  grid-column: 1;
+  grid-row: 1 / 6;
+  align-self: start;
+  position: sticky;
+  top: 90px;
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 12px;
+  border: 1px solid #d5e4da;
+}
+
+.topicos h2 {
+  font-size: 22px;
+  margin-bottom: 15px;
+}
+
+.topicos ul {
+  display: grid;
+  gap: 10px;
+}
+
+.topicos a {
+  display: block;
+  padding: 12px 15px;
+  border-radius: 10px;
+  border-left: 6px solid #f2c230;
+  color: #ffffff;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.topicos a:hover {
+  opacity: 0.85;
+}
+
+.topicos span {
+  display: block;
+  font-size: 14px;
+  font-weight: normal;
+}
+
+/* cor de cada tópico */
+.topico-aquecimento {
+  background-color: #17402c;
+}
+
+.topico-eventos {
+  background-color: #3f7d58;
+}
+
+.topico-energia {
+  background-color: #f2c230;
+  color: #17402c !important;
+  border-left-color: #17402c !important;
+}
+
+.topico-oceanos {
+  background-color: #2f6f5e;
+}
+
+.topico-previsao {
+  background-color: #8fbf6a;
+  color: #17402c !important;
+  border-left-color: #17402c !important;
+}
+
+/* ---------- Temas ---------- */
+.tema h2 {
+  display: inline-block;
+  font-size: 36px;
+  border-bottom: 5px solid #f2c230;
+}
+
+.tema > p {
+  margin: 12px 0 25px 0;
+  color: #4f6258;
+}
+
+/* ---------- Cards ---------- */
+.lista-cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 25px;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  background-color: #ffffff;
+  border: 1px solid #d5e4da;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.card-corpo {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  gap: 10px;
+  padding: 20px;
+}
+
+.categoria {
+  align-self: flex-start;
+  background-color: #fff6d6;
+  color: #17402c;
+  font-size: 14px;
+  font-weight: bold;
+  padding: 2px 12px;
+  border-radius: 20px;
+}
+
+.card h3 {
+  font-size: 22px;
+}
+
+.meta {
+  margin: 0;
+  font-size: 14px;
+  color: #4f6258;
+}
+
+.card-corpo p {
+  margin: 0;
+}
+
+.ler-mais {
+  align-self: flex-start;
+  margin-top: auto;
+  background-color: #3f7d58;
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 8px 20px;
+  border-radius: 20px;
+}
+
+.ler-mais:hover {
+  background-color: #f2c230;
+  color: #17402c;
+}
+
+/* ---------- Previsão do tempo ---------- */
+.previsao {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 15px;
+  margin: 0;
+}
+
+.previsao div {
+  background-color: #17402c;
+  padding: 25px 10px;
+  text-align: center;
+  border-radius: 12px;
+}
+
+.previsao dt {
+  color: #eaf3ec;
+  font-weight: bold;
+}
+
+.previsao dd {
+  margin: 5px 0 0 0;
+  font-family: "Fraunces", Georgia, serif;
+  font-size: 32px;
+  font-weight: 800;
+  color: #ffffff;
+}
+
+/* o primeiro card (Hoje) fica amarelo */
+.previsao div:first-child {
+  background-color: #f2c230;
+}
+
+.previsao div:first-child dt,
+.previsao div:first-child dd {
+  color: #17402c;
+}
+
+/* ---------- Rodapé ---------- */
+.rodape {
+  background-color: #17402c;
+  border-top: 4px solid #f2c230;
+  color: #eaf3ec;
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.rodape h2 {
+  color: #ffffff;
+  margin-bottom: 10px;
+}
+
+.rodape p {
+  max-width: 600px;
+  margin: 0 auto 8px auto;
+}
+
+/* ==========================================
+   MEDIA QUERIES
+   ========================================== */
+
+/* Tablet */
+@media (max-width: 1024px) {
+  .slider img {
+    height: 320px;
+  }
+
+  .conteudo {
+    grid-template-columns: 1fr;
+  }
+
+  .tema,
+  .topicos {
+    grid-column: 1;
+  }
+
+  .topicos {
+    grid-row: auto;
+    position: static;
+  }
+
+  .topicos ul {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .previsao {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+/* Celular */
+@media (max-width: 600px) {
+  .topo {
+    flex-direction: column;
+    gap: 8px;
+    position: static;
+    padding: 12px 15px;
+  }
+
+  .topo h1 {
+    font-size: 26px;
+  }
+
+  .slider img {
+    height: 200px;
+  }
+
+  .conteudo {
+    padding: 25px 15px;
+  }
+
+  .topicos ul {
+    grid-template-columns: 1fr;
+  }
+
+  .lista-cards {
+    grid-template-columns: 1fr;
+  }
+
+  .tema h2 {
+    font-size: 28px;
+  }
+
+  .previsao dd {
+    font-size: 26px;
+  }
+}
